@@ -2,11 +2,10 @@ name: Deploy Distribution
 on: [push,workflow_dispatch]
 jobs:
     test:
-        runs-on: ubantu-latest
+        runs-on: ubuntu-latest
         steps:
             - name: "Get Code"
               run: | 
                 echo "Deploying React Application..."
                 echo "${{toJson(github)}}"
                 git clone https://github.com/${{github.repository}}.git
-                
