@@ -1,0 +1,8 @@
+name: Welcome
+on: push
+jobs:
+    greetgo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Greet Go Developer"
+              run: echo "Welcome, Go Developer!"
