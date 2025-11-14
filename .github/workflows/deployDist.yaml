@@ -6,6 +6,9 @@ jobs:
         steps:
             - name: "Get Code"
               run: | 
-                echo "Deploying React Application..."
+                echo "Cloneing repository..."
                 echo "${{toJson(github)}}"
                 git clone https://github.com/${{github.repository}}.git
+                - name: "Install Node.js"
+                run: node -version || echo "Node.js not found"
+                echo "Atul Joshi Is Using Github Actions"
