@@ -1,0 +1,11 @@
+name: Version_Name
+on: push
+jobs:
+    versionname:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Display Version And Name"
+              run: echo "My name is Atul Joshi I am using Github Actions for CI/CD"
+            - name: "Display Node.js Version"
+              run: node -version || echo "Node.js not found"
+        
